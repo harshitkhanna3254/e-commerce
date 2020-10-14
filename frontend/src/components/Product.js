@@ -1,7 +1,9 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const Guitar = ({ product }) => {
+import Review from "./Review";
+
+const Product = ({ product }) => {
   return (
     <>
       <Card>
@@ -15,10 +17,8 @@ const Guitar = ({ product }) => {
             </Card.Title>
           </a>
 
-          <Card.Text as="div">
-            <div className="my-3">
-              {product.rating} from {product.numReviews} reviews
-            </div>
+          <Card.Text as="div" style={{ marginBottom: "0.2rem" }}>
+            <Review rating={product.rating} numReviews={product.numReviews} />
           </Card.Text>
 
           <Card.Text as="h3">${product.price}</Card.Text>
@@ -29,4 +29,4 @@ const Guitar = ({ product }) => {
   );
 };
 
-export default Guitar;
+export default Product;
