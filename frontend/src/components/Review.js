@@ -60,7 +60,7 @@ const Review = ({ rating, numReviews, colorBad, colorGood }) => {
         ></i>
       </span>
 
-      <span>{numReviews} reviews</span>
+      <span>| {numReviews} reviews</span>
     </div>
   );
 };
