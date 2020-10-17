@@ -66,6 +66,8 @@ const Review = ({ rating, numReviews, colorBad, colorGood }) => {
 };
 
 Review.defaultProps = {
+  rating: 0,
+  numReviews: 0,
   colorBad: "#D5B70F",
   colorGood: "#00A00A",
 };

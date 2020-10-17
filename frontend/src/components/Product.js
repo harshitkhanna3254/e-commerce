@@ -19,7 +19,9 @@ const Product = ({ product }) => {
           </Link>
 
           <Card.Text as="div" style={{ marginBottom: "0.2rem" }}>
-            <Review rating={product.rating} numReviews={product.numReviews} />
+            {product.rating && (
+              <Review rating={product.rating} numReviews={product.numReviews} />
+            )}
           </Card.Text>
 
           <Card.Text as="h3">${product.price}</Card.Text>
