@@ -29,14 +29,14 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     category: {
-      type: Boolean,
+      type: String,
       required: true,
     },
     description: {
       type: String,
       required: true,
     },
-    reviews: [ReviewSchema],
+    reviews: [reviewSchema],
     rating: {
       type: Number,
       required: true,
