@@ -1,8 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import products from "./data/products.js";
+import connectDB from "./config/db.js";
 
 dotenv.config();
+connectDB();
 
 const app = express();
 
@@ -23,5 +25,6 @@ app.get("/api/products/:id", (req, res) => {
 app.listen(process.env.PORT || 5000, () => {
   console.log(
     `Listening in ${process.env.NODE_ENV} environment on port ${process.env.PORT}`
+      .yellow.bold
   );
 });
